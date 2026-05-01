@@ -1,0 +1,12 @@
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\obj\Release\net9.0\Jellyfin.Plugin.Prerolls.csproj.AssemblyReference.cache
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\obj\Release\net9.0\Jellyfin.Plugin.Prerolls.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\obj\Release\net9.0\Jellyfin.Plugin.Prerolls.AssemblyInfoInputs.cache
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\obj\Release\net9.0\Jellyfin.Plugin.Prerolls.AssemblyInfo.cs
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\obj\Release\net9.0\Jellyfin.Plugin.Prerolls.csproj.CoreCompileInputs.cache
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\bin\Release\net9.0\Jellyfin.Plugin.Prerolls.deps.json
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\bin\Release\net9.0\Jellyfin.Plugin.Prerolls.dll
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\bin\Release\net9.0\Jellyfin.Plugin.Prerolls.pdb
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\obj\Release\net9.0\Jellyfin.Plugin.Prerolls.dll
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\obj\Release\net9.0\refint\Jellyfin.Plugin.Prerolls.dll
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\obj\Release\net9.0\Jellyfin.Plugin.Prerolls.pdb
+C:\Users\Oliver\Desktop\jellyfin-plugin-prerolls\Jellyfin.Plugin.Prerolls\obj\Release\net9.0\ref\Jellyfin.Plugin.Prerolls.dll

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Prerolls</title>
+</head>
+<body>
+    <div id="prerollsConfigPage" data-role="page" class="page type-interior pluginConfigurationPage"
+         data-require="emby-input,emby-button,emby-select,emby-checkbox">
+
+        <div data-role="content">
+            <div class="content-primary">
+
+                <form id="prerollsConfigForm">
+
+                    <div class="sectionTitleContainer flex align-items-center">
+                        <h2 class="sectionTitle">Prerolls Settings</h2>
+                    </div>
+
+                    <p>
+                        A random video from your folder will play before each movie or TV episode,
+                        depending on the setting below. No Cinema Mode required.
+                    </p>
+
+                    <!-- Folder path -->
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="prerollFolder">
+                            Pre-roll Folder Path
+                        </label>
+                        <input id="prerollFolder"
+                               name="PrerollFolder"
+                               type="text"
+                               is="emby-input"
+                               placeholder="e.g. D:\AdultSwimBumps" />
+                        <div class="fieldDescription">
+                            Full path to the folder containing your .mp4 pre-roll files.
+                            All video files in this folder are picked at random.
+                        </div>
+                    </div>
+
+                    <!-- Media type selector -->
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="mediaType">
+                            Play Pre-rolls Before
+                        </label>
+                        <select id="mediaType" name="MediaType" is="emby-select">
+                            <option value="0">Movies only</option>
+                            <option value="1">TV Shows only</option>
+                            <option value="2">Both Movies and TV Shows</option>
+                        </select>
+                        <div class="fieldDescription">
+                            Choose which content types trigger a pre-roll.
+                        </div>
+                    </div>
+
+                    <div>
+                        <button is="emby-button" type="submit" class="raised button-submit block">
+                            <span>Save</span>
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var PrerollsConfig = {
+            pluginUniqueId: '4b5b2c4a-d3f1-4e2b-9c8e-1a2b3c4d5e6f',
+
+            load: function (page) {
+                ApiClient.getPluginConfiguration(PrerollsConfig.pluginUniqueId).then(function (config) {
+                    page.querySelector('#prerollFolder').value = config.PrerollFolder || '';
+                    page.querySelector('#mediaType').value = config.MediaType !== undefined ? config.MediaType : 1;
+                });
+            },
+
+            save: function (page) {
+                ApiClient.getPluginConfiguration(PrerollsConfig.pluginUniqueId).then(function (config) {
+                    config.PrerollFolder = page.querySelector('#prerollFolder').value;
+                    config.MediaType = parseInt(page.querySelector('#mediaType').value, 10);
+                    ApiClient.updatePluginConfiguration(PrerollsConfig.pluginUniqueId, config).then(function () {
+                        Dashboard.processPluginConfigurationUpdateResult();
+                    });
+                });
+            }
+        };
+
+        document.querySelector('#prerollsConfigPage').addEventListener('pageshow', function () {
+            PrerollsConfig.load(this);
+        });
+
+        document.querySelector('#prerollsConfigForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            PrerollsConfig.save(document.querySelector('#prerollsConfigPage'));
+        });
+    </script>
+</body>
+</html>
